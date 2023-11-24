@@ -1,0 +1,70 @@
+console.log("conectado")
+//averiguar sobre arrays, objetos, variables, ciclo for, metodos map, averiguar dom
+const bebidas = [
+  {
+    titulo: "Caña..........estrella Galicia bodega/1906",
+    precio: 1.50,
+    descripcion: "Una cerveza dorada y ligera con un sabor refrescante y notas sutiles de malta.."
+  },
+  {
+    titulo: "Doble.........estrella Galicia bodega/1906",
+    precio: '2,50',
+    descripcion: "Doble medida de cerveza dorada y ligera con un sabor refrescante y notas sutiles de malta."
+  },
+  {
+    titulo: "Jarra.........estrella Galicia bodega/1906",
+    precio: 3.50,
+    descripcion: "Jarra de cerveza dorada y ligera con un sabor refrescante y notas sutiles de malta"
+  },
+  {
+    titulo: "Crveza 1/3..........estrella Galicia/0,0/tostada ",
+    precio: 2.50,
+    descripcion: "Fresca cerveza que despierta los sentidos con sus profundos tonos tostados y matices ahumados",
+  },
+{
+  titulo: "Crveza 1/3..........1906 ",
+    precio: '3,00',
+    descripcion: "Variedad de cerveza: Black/Roja/Irish/Reserva"
+},
+{
+  titulo: "Refresco lata",
+    precio: '2,10',
+    descripcion: "Variedad de latas: Coca Cola/Sprite/Fanta/Tonica/Nestee"
+},
+{
+  titulo: "Vaso de vino tinto",
+    precio: '2,50',
+    descripcion: "Dsfrute de un vino tino"
+},
+{
+  titulo: "Jarra de vino tinto",
+    precio: '4,50',
+    descripcion: "Variedad de cerveza: Black/Roja/Irish/Reserva"
+},
+{
+  titulo: "Copa",
+    precio: '3,00',
+    descripcion: "Variedad de vinos: Tino/Blanco/Rosee "
+},
+{
+  titulo: "Botella 750cc",
+    precio: '12,00',
+    descripcion: "Variedad de vinos: Tino/Blanco/Rosee"
+},
+
+]
+
+
+function mostrarBebidas() {
+  const contenedorBebidas = document.getElementById('listaBebidas');
+  contenedorBebidas.innerHTML = '';  
+
+  bebidas.map(bebida => {
+    contenedorBebidas.innerHTML += `
+      <h3>${bebida.titulo}</h3>
+      <p>Precio: $${bebida.precio}</p>
+      <p>${bebida.descripcion}</p>
+    `;
+  });
+}
+mostrarBebidas()
